@@ -9,24 +9,23 @@ Post.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
-    }
-  },
+    },
 
-  {
+
+  
     title: {
       type: DataTypes.STRING,
-      allowNull: falase
-    }
-  }, 
+      allowNull: false
+    },
+  
 
-  {
+  
     description: {
       type: DataTypes.STRING,
       allowNull: false
-    }
-  }, 
-
-  {
+    },
+  
+  
     user_id: {
       type: DataTypes.INTEGER,
       referemces: {
