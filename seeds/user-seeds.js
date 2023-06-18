@@ -32,3 +32,5 @@ const userData = [
         password: "joshiscool1234"
     }
 ];
+
+module.exports = userData

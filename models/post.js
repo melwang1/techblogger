@@ -11,7 +11,6 @@ Post.init(
       autoIncrement: true
     },
 
-
   
     title: {
       type: DataTypes.STRING,
@@ -19,7 +18,6 @@ Post.init(
     },
   
 
-  
     description: {
       type: DataTypes.STRING,
       allowNull: false
