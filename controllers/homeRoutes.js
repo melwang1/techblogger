@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
      
     // })
     // const post = postData.get({ plain: true });
-    res.render("homepage")
+    res.render("homepage",{loggedIn:req.session.loggedIn})
   }
   catch(err){
     if(err) console.log("Homepage",err)
@@ -49,11 +49,11 @@ router.get('/login', (req, res) => {
     res.redirect('/homepage');
     return;
   }
-
+  console.log('logged_in')
   res.render('login');
 });
 
-router.get('signup', (req, res) => {
+router.get('/signup', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
     return;
