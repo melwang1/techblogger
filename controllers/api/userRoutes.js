@@ -18,6 +18,8 @@ router.post('/signup', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+
+    console.log("*****LOGIN**",req.body)
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -40,11 +42,12 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+      console.log(req.session)
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
   } catch (err) {
+    console.log(err)
     res.status(400).json(err);
   }
 });

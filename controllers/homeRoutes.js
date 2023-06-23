@@ -11,7 +11,8 @@ router.get('/', async (req, res) => {
      
     // })
     // const post = postData.get({ plain: true });
-    res.render("homepage",{loggedIn:req.session.loggedIn})
+    console.log("Home route",req.session)
+    res.render("homepage",{loggedIn:req.session.logged_in})
   }
   catch(err){
     if(err) console.log("Homepage",err)
@@ -46,11 +47,11 @@ router.get('/project/:id', async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/homepage');
+    res.redirect('/dashboard',{loggedIn:req.session.logged_in});
     return;
   }
   console.log('logged_in')
-  res.render('login');
+  res.render('login',{loggedIn:req.session.logged_in});
 });
 
 router.get('/signup', (req, res) => {
@@ -60,7 +61,7 @@ router.get('/signup', (req, res) => {
 
   }
 
-  res.render('signup');
+  res.render('signup',{loggedIn:req.session.logged_in});
 })
 
 module.exports = router;
