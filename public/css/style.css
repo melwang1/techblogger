@@ -162,3 +162,39 @@ img {
   align-content: flex-start;
   align-items: center;
 }
+
+/* SIGNUP */
+.signup-form {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5pt;
+}
+
+.signupbtn {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5pt;
+  margin-top: 10pt;
+}
+
+#email-signup {
+  margin-left: 30pt;
+}
+
+#password-signup {
+  margin-left: 3pt;
+}
+
+/* Comment */
+.addComment {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5pt;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5pt;
+}
+
+.commentbtn {
+  margin-top: 10pt;
+
+}
