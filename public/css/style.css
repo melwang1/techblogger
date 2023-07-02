@@ -183,7 +183,30 @@ img {
   margin-left: 3pt;
 }
 
-/* Comment */
+/* LOGIN */
+.logintitle {
+  font-size: 20pt;
+  text-decoration: underline;
+}
+
+.login-form {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5pt;
+}
+
+#email-login {
+  margin-left: 30pt;
+}
+
+#password-login {
+  margin-left: 3pt;
+}
+
+.loginbtn {
+  margin-top: 10pt;
+}
+
+/* COMMENT */
 .addComment {
   font-family: Arial, Helvetica, sans-serif;
   padding: 5pt;
@@ -196,5 +219,4 @@ h2 {
 
 .commentbtn {
   margin-top: 10pt;
-
 }
