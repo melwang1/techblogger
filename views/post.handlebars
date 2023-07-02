@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-body">
+   <h5>Title: {{title}}</h5>>
+   <p>{{description}}</p>
+  </div>
+</div>
+{{#if comments.length}}
+<section>
+  <h2>Comments</h2>
+  <ol>
+    {{#each comments as |comment|}}
+    <li>
+        {{comment_text}}
+   
+     
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<form class="addComment" data-postid="{{id}}">
+  <div class="form-group">
+    <label for="exampleInputComment">Comment</label>
+    <input type="text" class="form-control" id="comment_text" aria-describedby="comment" placeholder="Enter comment">
+    <small id="commentHelp" class="form-text text-muted">Leave a comment</small>
+  </div>
+  <button type="submit"   class="btn btn-primary">Submit</button>
+</form>
+
+<script src="/js/add-comment.js"></script>

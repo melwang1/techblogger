@@ -10,9 +10,10 @@ const addPostFormHandler = async (event) => {
             body: JSON.stringify({ title, description }),
             headers: { 'Content-Type': 'application/json' },
         });
-
+     
     if (response.ok) {
-        document.location.replace('/dashboard');
+        location.reload()
+       // document.location.replace('/dashboard');
     } else {
         alert(response.statusText);
     }
