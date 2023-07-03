@@ -18,6 +18,6 @@ const addCommentFormHandler = async (event) => {
         alert(response.statusText);
     }
     }
-}
+};
 
 document.querySelector('.addComment').addEventListener('submit', addCommentFormHandler);      

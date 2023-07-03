@@ -220,3 +220,35 @@ h2 {
 .commentbtn {
   margin-top: 10pt;
 }
+
+/* DASHBOARD  */
+.newpost-btn {
+  margin-top: 15pt;
+  margin-left: 5pt;
+}
+
+.postbox {
+  margin-left: 25pt;
+  margin-top: 30pt;
+}
+
+.postbox-title{
+  margin-left: 10pt;
+}
+
+.email {
+  margin-left: 5pt;
+}
+
+.allpost {
+  margin-left: 25pt;
+  font-size: 1.5rem;
+  padding: 5pt;
+  margin-top: 30pt;
+}
+
+#dashdescription {
+  margin-top: 10pt;
+}
+
+

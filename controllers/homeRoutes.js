@@ -88,4 +88,8 @@ router.get('/signup', (req, res) => {
   res.render('signup', { loggedIn: req.session.logged_in });
 })
 
+router.get('/logout', (req, res) => {
+  res.redirect('/')
+})
+
 module.exports = router;

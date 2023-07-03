@@ -1,14 +1,13 @@
-  <section class="row">
-  <div class = "column">
-    <h2>About Me</h2>
+  <section class="postbox-title">
+  <div class = "postbox-title">
     {{!-- {{> user-info}} --}}
-    <h3>Welcome <span>name</span></h3>
-    <h4>Email:<span>email</span></h4>
+    <h2>Welcome{{user.name}}</h2>
+    <h3 class ='email'>Email:{{user.email}}</h3>
   </div>
   </section>
-<section class="row">
+<section class="postbox">
   <div class = "column">
-    <h2>Create New Post</h2>
+    <h4>Create New Post</h4>
 
     <form class="newPost-form">
       <div>
@@ -17,9 +16,9 @@
       </div>
       <div>
         <label for="description">Text</label>
-        <textarea id="description" name="description"></textarea>
+        <textarea id="dashdescription" name="description"></textarea>
       </div>
-      <button type="submit" class="btn">Create</button>
+      <button type="submit" class="btn btn-primary newpost-btn">Create</button>
     </form>
   </div>
 
@@ -27,14 +26,14 @@
 
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
+  <h5 class="allpost">All Posts</h5>
   <ol>
     {{#each posts as |post|}}
-    <li>
+    <ul>
   
       {{>post-info post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+    </ul>
     {{/each}}
   </ol>
 </section>
