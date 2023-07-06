@@ -10,7 +10,8 @@ router.get('/', async (req, res) => {
       include: [{ model: User }, { model: Comment }]
     });
 
-    res.render("homepage", { loggedIn: req.session.logged_in,post:postData })
+    res.render("homepage", { loggedIn: req.session.logged_in ,
+      post:postData })
   }
   catch (err) {
     if (err) console.log("Homepage", err)
@@ -41,7 +42,7 @@ router.get('/post/:id', async (req, res) => {
 
     res.render('post', {
       ...post,
-      logged_in: req.session.logged_in
+      loggedIn: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -60,7 +61,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     console.log(user)
     res.render('dashboard', {
       ...user,
-      logged_in: true
+      loggedIn: true
     });
   } catch (err) {
     res.status(500).json(err);
